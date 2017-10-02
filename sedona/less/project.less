@@ -1,0 +1,24 @@
+@color_black: #232324;
+@color_blue: #81b3d2;
+@color_grey: #eeeeee;
+@color_brown: #766357;
+@color_white: #ffffff;
+@color_dark_grey: #a9a9a9;
+@color_back:#f2f2f2;
+@color_gray_border: #d6d6d6;
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('/fonts/@{urlName}/@{urlName}.eot');
+  src: url('/fonts/@{urlName}/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('/fonts/@{urlName}/@{urlName}.woff') format('woff'),
+  url('/fonts/@{urlName}/@{urlName}.ttf') format('truetype'),
+  url('/fonts/@{urlName}/@{urlName}.svg') format('svg');
+  font-weight: @weight;
+  font-style: @style;
+}
+  @font-face {
+  .font(@fontRegular);
+}
+@font-face {
+  .font(@fontRegular; @fontBold; bold);
+}
