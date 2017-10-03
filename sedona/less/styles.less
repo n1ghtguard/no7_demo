@@ -421,6 +421,13 @@ body{
         color: @color_white;
         .h3();
         background: @color_brown;
+        &:hover{
+          background: @color_form-hover;
+        }
+        &:active{
+          color:@color_form-text-active;
+          background: @color_form-active;
+        }
       }
 
     }
@@ -447,8 +454,15 @@ body{
           background: @color_grey;
           border: none;
           text-transform: uppercase;
-          .xs-block({ width: 100%; })
+          .xs-block({ width: 100%; });
+          &:hover{
+            background: @color_input_hover;
+          }
+          &:focus{
+            background: @color_white;
+          }
         }
+
         .form-hotel-label {
           display: inline-block;
           width: 25%;
@@ -469,6 +483,12 @@ body{
           fill:@color_gray_calendar;
           cursor:pointer;
           .xs(top,70%);
+          &:hover{
+            fill: @color_black;
+          }
+          &:active{
+            fill:@color_blue;
+          }
         }
         .field-count {
           width: 50%;
@@ -504,8 +524,15 @@ body{
             width: 33%;
             background: @color_grey;
             line-height: 38px;
+            &:hover svg{
+              fill: @color_black;
+            }
+            &:active svg{
+              fill:@color_blue;
+            }
             svg {
               fill: @color_dark_grey;
+
             }
           }
 
@@ -524,8 +551,16 @@ body{
             width: 33%;
             background: @color_grey;
             line-height: 38px;
+            &:hover svg{
+              fill: @color_black;
+            }
+            &:active svg{
+              fill:@color_blue;
+            }
             svg {
               fill: @color_dark_grey;
+
+
             }
           }
         }
@@ -547,6 +582,13 @@ body{
         border: none;
         text-transform: uppercase;
         .h3();
+        &:hover{
+          background: @color_submit_hover;
+        }
+        &:active{
+          color:@color_submit_active;
+          background: @color_submit_active_text;
+        }
       }
     }
   }
@@ -598,6 +640,15 @@ body{
             width: 46px;
             height: 48px;
             background: @color_blue;
+            &:hover{
+              background: @color_submit_hover;
+            }
+            &:active{
+              background: @color_submit_active_text;
+            }
+            &:active svg{
+            fill:@color_submit_active;
+          }
             svg {
               fill: @color_white;
             }
@@ -614,7 +665,16 @@ body{
         a{
           display:inline-block;
           vertical-align:middle;
+          &:hover svg{
+            fill: @color_hover_logo;
+          }
+
+          &:active svg{
+            fill:@color_active_logo;
+          }
+
         }
+
       }
     }
 

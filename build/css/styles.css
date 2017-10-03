@@ -550,6 +550,13 @@ body {
   font-weight: bold;
   background: #766357;
 }
+.site-form .form-title h3:hover {
+  background: #604e43;
+}
+.site-form .form-title h3:active {
+  color: #928a85;
+  background: #503e33;
+}
 .site-form .form-order {
   z-index: 30;
   position: absolute;
@@ -579,6 +586,12 @@ body {
   .site-form .form-order .form-field .hotel-form__input {
     width: 100%;
   }
+}
+.site-form .form-order .form-field .hotel-form__input:hover {
+  background: #ebebeb;
+}
+.site-form .form-order .form-field .hotel-form__input:focus {
+  background: #ffffff;
 }
 .site-form .form-order .form-field .form-hotel-label {
   display: inline-block;
@@ -614,6 +627,12 @@ body {
   .site-form .form-order .form-field .hotel-form__input--calendar-image {
     top: 70%;
   }
+}
+.site-form .form-order .form-field .hotel-form__input--calendar-image:hover {
+  fill: #232324;
+}
+.site-form .form-order .form-field .hotel-form__input--calendar-image:active {
+  fill: #81b3d2;
 }
 .site-form .form-order .form-field .field-count {
   width: 50%;
@@ -658,6 +677,12 @@ body {
   background: #eeeeee;
   line-height: 38px;
 }
+.site-form .form-order .form-field .count-buttons .count-button-minus:hover svg {
+  fill: #232324;
+}
+.site-form .form-order .form-field .count-buttons .count-button-minus:active svg {
+  fill: #81b3d2;
+}
 .site-form .form-order .form-field .count-buttons .count-button-minus svg {
   fill: #a9a9a9;
 }
@@ -675,6 +700,12 @@ body {
   width: 33%;
   background: #eeeeee;
   line-height: 38px;
+}
+.site-form .form-order .form-field .count-buttons .count-button-plus:hover svg {
+  fill: #232324;
+}
+.site-form .form-order .form-field .count-buttons .count-button-plus:active svg {
+  fill: #81b3d2;
 }
 .site-form .form-order .form-field .count-buttons .count-button-plus svg {
   fill: #a9a9a9;
@@ -699,6 +730,13 @@ body {
   text-transform: uppercase;
   font-size: 21px;
   font-weight: bold;
+}
+.site-form .form-order .hotel-form__submit:hover {
+  background: #669ec0;
+}
+.site-form .form-order .hotel-form__submit:active {
+  color: #5496bd;
+  background: #81b2ce;
 }
 /*        Карта            */
 .footer-map {
@@ -758,6 +796,15 @@ body {
   height: 48px;
   background: #81b3d2;
 }
+.footer-map .site-footer .social-buttons li .social-link:hover {
+  background: #669ec0;
+}
+.footer-map .site-footer .social-buttons li .social-link:active {
+  background: #81b2ce;
+}
+.footer-map .site-footer .social-buttons li .social-link:active svg {
+  fill: #5496bd;
+}
 .footer-map .site-footer .social-buttons li .social-link svg {
   fill: #ffffff;
 }
@@ -774,4 +821,10 @@ body {
 .footer-map .site-footer .copy a {
   display: inline-block;
   vertical-align: middle;
+}
+.footer-map .site-footer .copy a:hover svg {
+  fill: #98c1da;
+}
+.footer-map .site-footer .copy a:active svg {
+  fill: #bdbbbc;
 }
