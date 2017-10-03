@@ -20,6 +20,10 @@ body{
   background:@color_back;
   min-width:340px;
 }
+
+                           /*          обертка сайта         */
+
+
 .wrapper{
   max-width:1200px;
   margin:0 auto;
@@ -27,10 +31,14 @@ body{
   box-shadow: 5px 1px 15px 0px rgba(0,1,1,0.25);
 }
 
+                                 /*         хэдер сайта       */
+
 .site-header{
   position: relative;
   z-index:10;
   min-height:56px;
+
+                                 /*    верхнее меню   */
 
       .site__menu {
 
@@ -75,8 +83,10 @@ body{
           .top-menu-item__map{
             .sm(order,-3);
             .sm(border-top,none);
+            float:right;
           }
           .top-menu-item__hotel{
+            float:right;
             .sm-block({
               order:1;
               box-shadow:0px 2px 8px 0px rgba(50, 50, 50, 0.75);
@@ -93,48 +103,7 @@ body{
           });
           }
 
-          .top-menu-item__logo {
-            display:block;
-            text-align: center;
 
-
-            .sm-block({
-              border: none;
-              line-height: normal;
-              height: 56px;
-              order:2;
-            background:none;
-            position:relative;
-            });
-
-            .site__menu-button--menu{
-              position:absolute;
-              display:none;
-              right:4%;
-              transform: translateY(-50%);
-              top:50%;
-              fill:@color_blue;
-
-              .sm(display,inline-block);
-            }
-
-            .site-logo{
-              display:inline-block;
-              background: url('../img/form-logo-triangle.svg') no-repeat 50%;
-              width:148px;
-              height:70px;
-              .sm-block({
-              display:block;
-              position:absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              width:148px;
-              height:70px;
-              z-index:5;
-              });
-            }
-
-          }
         }
         .site__menu-button--cross{
             position:absolute;
@@ -150,8 +119,61 @@ body{
       }
 
 
+                                 /*      логотип          */
 
 }
+.top-menu-item__logo {
+  display:inline-block;
+  text-align: center;
+  width:20%;
+  position:relative;
+
+  .sm-block({
+    width:100%;
+    border: none;
+    line-height: normal;
+    height: 56px;
+    order:2;
+    background:none;
+    position:relative;
+  });
+
+  .site__menu-button--menu{
+    position:absolute;
+    display:none;
+    right:4%;
+    transform: translateY(-50%);
+    top:50%;
+    fill:@color_blue;
+
+    .sm(display,inline-block);
+  }
+
+  .site-logo{
+    display:inline-block;
+    background: url('../img/form-logo-triangle.svg') no-repeat 50%;
+    width:148px;
+    height:70px;
+    position:absolute;
+    top:-16px;
+    left:50%;
+    transform:translateX(-50%);
+    .sm-block({
+      display:block;
+      position:absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width:148px;
+      height:70px;
+      z-index:5;
+    top:0;
+    });
+  }
+
+}
+
+                                 /*   Блок с картинкой после меню   */
+
 .intro__block{
 
   text-align:center;
@@ -199,6 +221,8 @@ body{
   }
 }
 
+                            /*     Первый заголовок     */
+
 .title{
   margin-top:58px;
   text-align:center;
@@ -212,23 +236,26 @@ body{
     }
   }
 }
+
+                                 /*   Контентные блоки   */
+
 .promo__block--first{
   margin-top: 57px;
-
-
 }
+
 .promo__block {
-  .row-flex();
+  display:flex;
+  flex-wrap:wrap;
 
   .promo-item {
-    .size(4);
-    .col-padding();
-    margin-left: @offset_one_side;
-    padding-left: 0;
-    padding-right: @offset;
+    width: 33.333333333333336%;
     background: @color_blue;
-    .size-sm(12);
-    .sm-block({ margin-left: 0; padding-right: 0; padding-left: @offset_one_side; });
+
+    .sm-block({
+      width:100%;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: @offset_one_side; });
 
     .promo-item-wrapper {
       color: @color_white;
@@ -264,13 +291,13 @@ body{
   }
 
   .promo-pic {
-    .col-padding();
-    .size(8);
-    margin-right: @offset_one_side;
-    padding-right: 0;
-    padding-left: 0;
-    .size-sm(12);
-    .sm-block({ height: 256px; margin-right: 5px; padding-left: 5px; });
+
+    width:66.66666666666667%;
+
+    .sm-block({ width:100%;
+      height: 256px;
+      margin-right: 5px;
+      padding-left: 5px; });
     .promo-pic--wrapper {
       background: url('../img/photo-city@1x.jpg') no-repeat;
       width: 100%;
@@ -280,19 +307,12 @@ body{
 
   }
   .promo-item--reverse {
-    margin-right: @offset_one_side;
-    padding-left: @offset;
-    padding-right: 0;
     background: @color_blue;
-    margin-left: 0;
+
   }
 
   .promo-pic--reverse {
-    margin-left: @offset_one_side;
-    padding-right: 0;
-    padding-left: 0;
     order: -1;
-    margin-right: 0;
     .sm(order, 0);
 
     .promo-pic--wrapper-reverse {
@@ -304,11 +324,13 @@ body{
   }
 
   .promo-item--icon {
-    .size(4);
-    .col-padding();
-    .size-sm(12);
+    width:33.333333333333336%;
+
     text-align: center;
-    .sm-block({ padding-left: 25px; });
+    .sm-block({
+      width:100%;
+      padding-left: 25px;
+    });
 
     .promo-item--icon-wrapper {
       padding: 60px 44px 85px 44px;
@@ -347,36 +369,25 @@ body{
 
   .promo-item--gray {
     background: @color_grey;
-    margin: 0;
-    padding-right: @offset_one_side;
-    padding-left: @offset_one_side;
-    .sm(margin-right, 5px);
+    &:not(:last-of-type) .promo-item-wrapper:after{
+      .sm-block({
+        content:"";
+        display:block;
+        border-top:1px solid @color_gray_border;
+        width:100%;
 
-    &:first-child {
-      margin-left: @offset_one_side;
-      padding-left: 0;
-    }
-    &:last-child {
-      margin-right: @offset_one_side;
-      padding-right: 0;
+      })
     }
     .promo-item-wrapper {
       color: @color_black;
       padding:33px 57px;
       .sm(padding,33px 119px);
       .xs(padding,33px 30px 0);
-      &:after{
-       .sm-block({
-        content:"";
-        display:block;
-        border-top:1px solid @color_gray_border;
-        width:100%;
 
-       })
-      }
     }
   }
 }
+                        /*            Заголовок после контентоного блока         */
 
 .title-footer {
   margin-bottom: 50px;
@@ -390,6 +401,7 @@ body{
 }
 
 
+                              /*      Кнопка активации формы     */
 
   .site-form {
     position:relative;
@@ -412,6 +424,7 @@ body{
       }
 
     }
+                                      /* Форма */
 
     .form-order {
       z-index:30;
@@ -427,6 +440,7 @@ body{
       .form-field {
         font-size: 0;
         margin-bottom: 30px;
+        position:relative;
 
         .hotel-form__input {
           padding: 14px 0 14px 14px;
@@ -446,6 +460,15 @@ body{
           box-sizing: border-box;
           font-size: 14px;
           .xs-block({ width: 100%; });
+        }
+        .hotel-form__input--calendar-image{
+          position:absolute;
+          top:50%;
+          right:3%;
+          transform:translateY(-50%);
+          fill:@color_gray_calendar;
+          cursor:pointer;
+          .xs(top,70%);
         }
         .field-count {
           width: 50%;
@@ -527,8 +550,15 @@ body{
       }
     }
   }
+
+
+                              /*        Карта            */
+
 .footer-map {
   position: relative;
+
+                                 /*    Футер   */
+
   .site-footer {
       position: relative;
 
