@@ -1,0 +1,42 @@
+@color_black: #232324;
+@color_blue: #81b3d2;
+@color_grey: #eeeeee;
+@color_brown: #766357;
+@color_white: #ffffff;
+@color_dark_grey: #a9a9a9;
+@color_back:#f2f2f2;
+@color_gray_border: #d6d6d6;
+@color_gray_calendar: #c2c2c2;
+@color_form-hover: #604e43;
+@color_form-active:#503e33;
+@color_form-text-active:#928a85;
+@color_input_hover: #ebebeb;
+@color_submit_hover: #669ec0;
+@color_submit_active: #5496bd;
+@color_submit_active_text:#81b2ce;
+@color_hover_logo: #98c1da;
+@color_active_logo:#bdbbbc;
+@color_range_toggle:#ababab;
+@color_range_toggle_hover:#1c4f80;
+@color_gray_border_form: #d6d6d6;
+@rating_font_color: #666666;
+@color_triangle_menu: #cacaca;
+@color_title_hover:#b7b7b7;
+@color_title_menu: #b2b2b2;
+
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('/fonts/@{urlName}/@{urlName}.eot');
+  src: url('/fonts/@{urlName}/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('/fonts/@{urlName}/@{urlName}.woff') format('woff'),
+  url('/fonts/@{urlName}/@{urlName}.ttf') format('truetype'),
+  url('/fonts/@{urlName}/@{urlName}.svg') format('svg');
+  font-weight: @weight;
+  font-style: @style;
+}
+  @font-face {
+  .font(@fontRegular);
+}
+@font-face {
+  .font(@fontRegular; @fontBold; bold);
+}
