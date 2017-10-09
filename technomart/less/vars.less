@@ -3,8 +3,89 @@
 
 @columns: 12;
 
-@offset: 30px;
+@offset: 20px;
 @offset_one_side: (@offset / 2);
 
-@color_blue_light: #73C0FF;
-@color_blue_dark: #7373FF;
+@color_blue_dark: #293449;
+@color_blue_dark_hover:#212a3a;
+@color_blue_dark_active:#161d29;
+@color_blue_dark_focus:#161d29;
+@color_blue_dark_active_menu:#1d2739;
+@color_red_light: #ff5357;
+@color_red_text: #fb463c;
+@color_red_text_hover:#ca2c37;
+@color_red_text_active:#ba2732;
+@color_white:#ffffff;
+@color_gray_light:#f3f7f9;
+@color_gray_light2:#f4f8fa;
+@color_green:#6db254;
+@color_green_hover:#5fbb2d;
+@color_green_light:#8ed78f;
+@color_green_active:#518534;
+@color_yellow:#ffbf47;
+@color_blue_light:#3bbce3;
+@color_pink:#dc91d8;
+@color_yellow_light:#ffc047;
+@color_red:#ee3643;
+@color_cream:#f9f5f0;
+@color_orange:#ccb489;
+@color_black:#000000;
+@color_blue:#3d546e;
+@color_cream_border:#eaeaea;
+@color_gray_text:#a9a9a9;
+@color_gray_logo:#b7bfc8;
+@color_gray_logo_login:#c5c5c5;
+@color_blue_dark_border:#4d637b;
+@color_blue_dark_text:#3d546e;
+@color_blue_dark_menu_border:#3d546e;
+@color_yellow_light_text: #ffda96;
+@color_blue_dark_social_buttons: #29384a;
+@color_red_button_border: #c23f42;
+@color_green_buttons: #63a63e;
+@color_green_buttons_border: #367315;
+@color_blue_dark_text_buttons: #32425c;
+
+
+
+
+
+.round-button(){
+display:inline-block;
+color:@color_white;
+background:@color_red_light;
+border-radius:3px;
+text-transform:uppercase;
+}
+
+.clearfix(){
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.h2(){
+  font-size:30px;
+  line-height:24px;
+}
+
+svg{
+  position:absolute;
+  bottom:50%;
+  left:7%;
+  transform:translateY(50%);
+}
+
+.red_flag{
+  background-image:url(../img/redflag.png);
+  background-repeat:no-repeat;
+  background-position:100% 0;
+  background-color:transparent;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width:940px;
+}
